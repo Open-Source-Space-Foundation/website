@@ -4,7 +4,7 @@ import Image from "next/image";
 import Header from "../components/Header"; // relative import from projects/page.tsx
 import { projects, Project } from "../data/projects";
 
-export default function ProjectsPage() {
+export default function News() {
   return (
     <div className="font-sans min-h-screen flex flex-col">
       {/* Header */}

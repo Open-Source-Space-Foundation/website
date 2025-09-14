@@ -49,18 +49,18 @@ export default function Home() {
               </button>
               {isCommunityOpen && (
                 <div className="absolute mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg py-2 w-40">
-                  <a
-                    href="#Forum"
+                  <Link
+                    href="/news"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     News
-                  </a>
-                  <a
-                    href="#Events"
+                  </Link>
+                  <Link
+                    href="/project-of-the-month"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     Project of the Month
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
