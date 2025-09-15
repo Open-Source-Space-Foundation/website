@@ -5,81 +5,13 @@ import { useState } from "react";
 import Link from "next/link";
 import ProjectsCarousel from "./components/Carosel";
 import NewsCarousel from "./components/Carosel";
+import Header from "./components/Header";
 
 export default function Home() {
   const [isCommunityOpen, setCommunityOpen] = useState(false);
   return (
     <div className="font-sans grid grid-rows-[auto_1fr_auto] min-h-screen">
-      {/* ---- HEADER ---- */}
-      <header className="w-full flex items-center justify-between px-8 py-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-black sticky top-0 z-50">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="Logo" width={70} height={70} />
-          <span className="font-bold text-lg">
-            Open Source Space Foundation
-          </span>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex gap-6 text-sm sm:text-base font-medium">
-          <Link
-            href="/projects"
-            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
-            Projects
-          </Link>
-          <a
-            href="#Contribute"
-            className="hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            Contribute
-          </a>
-          <a
-            href="#Community"
-            className="hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            {/* Community Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setCommunityOpen(true)}
-              onMouseLeave={() => setCommunityOpen(false)}
-            >
-              <button className="hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1">
-                Community ▾
-              </button>
-              {isCommunityOpen && (
-                <div className="absolute mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg py-2 w-40">
-                  <Link
-                    href="/news"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    News
-                  </Link>
-                  <Link
-                    href="/project-of-the-month"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    Project of the Month
-                  </Link>
-                </div>
-              )}
-            </div>
-          </a>
-          <a
-            href="#Calendar"
-            className="hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            Calendar
-          </a>
-
-          <a
-            href="#Contact"
-            className="hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            Contact Us
-          </a>
-        </nav>
-      </header>
+      <Header></Header>
 
       {/* ---- MAIN CONTENT ---- */}
       <main className="flex flex-col items-center justify-center gap-8 p-8">
@@ -170,9 +102,12 @@ export default function Home() {
           className="min-h-[60vh] bg-blue-100 w-full flex flex-col items-center py-20"
         >
           <h2 className="text-3xl font-bold">Calendar</h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">
-            View our project timeline and upcoming events.
-          </p>
+          <Link
+            href="https://calendar.google.com/calendar/embed?src=c_1d4a39d1945526383b2c3a9e5f48e66b14726fd3635a31110f65c30a3769a815%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-600"
+          >
+            Add your own open source events to this calendar
+          </Link>
           <div className="w-full max-w-4xl mt-8">
             <iframe
               src="https://calendar.google.com/calendar/embed?src=c_1d4a39d1945526383b2c3a9e5f48e66b14726fd3635a31110f65c30a3769a815%40group.calendar.google.com&ctz=America%2FLos_Angeles"
