@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Adding your project
+
+The files in the data folder correspond to the files to update your project onto the website. 
+
+Feel free to edit:
+contribute.ts
+projects.ts
+
+To add or update your project on the website. Then submit it as a pull request 
+
 ## Getting Started
 
 First, run the development server:
